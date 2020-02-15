@@ -1634,6 +1634,7 @@ class SoundNet:
                         input=True,
                         frames_per_buffer=chunk_size)
         logger.debug(" * live predictions *")
+        logger.info("Running prediction every {n} seconds".format(n=seconds))
         self.running = True
         sw = p.get_sample_size(FORMAT)
         while self.running:
